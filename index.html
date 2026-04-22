@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #5bb2ff;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 12px;
+      max-width: 860px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    /* Green header - full width */
+    .header {
+      background-color: #8dc63f;
+      width: 100%;
+      height: 100px;
+      margin-bottom: 4px;
+    }
+
+    /* Teal row wrapper */
+    .teal-row {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 4px;
+    }
+
+    /* Mobile: each teal item = full width stacked */
+    .teal-item {
+      background-color: #00b4c8;
+      float: left;
+      width: 100%;
+      height: 60px;
+      margin-bottom: 4px;
+    }
+
+    /* Gray row wrapper */
+    .gray-row {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* 2 columns x 2 rows */
+    .gray-item {
+      background-color: #ebedef;
+      float: left;
+      width: 50%;
+      height: 46px;
+      border: 2px solid #ffffff;
+    }
+
+    /*  >= 480px ── */
+    @media screen and (min-width: 480px) {
+
+      .header {
+        height: 140px;
+      }
+
+      /* 3 equal columns side by side */
+      .teal-item {
+        width: 33.33%;
+        height: 150px;
+        margin-bottom: 0;
+        border-right: 3px solid #ffffff;
+      }
+
+      .teal-item:last-child {
+        border-right: none;
+      }
+
+      /* 4 equal columns in one row */
+      .gray-item {
+        width: 25%;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Green header -->
+    <div class="header"></div>
+
+    <!-- Teal: stacked rows on mobile / 3 columns on desktop -->
+    <div class="teal-row">
+      <div class="teal-item"></div>
+      <div class="teal-item"></div>
+      <div class="teal-item"></div>
+    </div>
+
+    <!-- Gray: 2x2 on mobile / 4x1 on desktop -->
+    <div class="gray-row">
+      <div class="gray-item"></div>
+      <div class="gray-item"></div>
+      <div class="gray-item"></div>
+      <div class="gray-item"></div>
+    </div>
+
+  </div>
+</body>
+</html>
